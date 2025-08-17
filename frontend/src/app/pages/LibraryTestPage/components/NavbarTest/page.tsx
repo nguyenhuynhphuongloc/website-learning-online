@@ -129,7 +129,7 @@ export default function NavbarTest({ userAnswers, sectionInfo, data, id, type }:
                 ? 'http://localhost:8080/result-listening'
                 : 'http://localhost:8080/result-reading';
 
-        const resultPageUrl = `/pages/ResultPage?id=${id}&type=${type}`;
+        const resultPageUrl = `/pages/LibraryTestPage/ResultPage?id=${id}&type=${type}`;
 
         try {
             // Gửi POST (store)

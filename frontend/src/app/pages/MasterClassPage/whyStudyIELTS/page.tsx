@@ -2,29 +2,19 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-export default function WhyChooseSection() {
+export default function 
+WhyChooseSection() {
   return (
     <section className=" bg-white">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl text-cyan-300 font-bold mb-4">Why study IELTS with
-            <Image
-              alt="IOT Global Logo"
-              src="/assets/master-class/cm-logo.svg"
-              width={32}
-              height={32}
-              className="inline-block h-auto w-auto"
-            />
-          </h2>
-        </div>
+       
 
         {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 */}
 
         {/* Grid of benefits */}
         <div className="flex flex-wrap">
           {/* Item 1 */}
-          <section className="flex-1 max-w-[410px] relative mt-8">
+          <section className="flex-1 max-w-[410px] relative mt-8 mr-10">
             <div className="bg-blue-50 rounded-lg px-6 pt-7 pb-10 ml-6 mb-6">
               <div className="bg-white text-6xl font-bold text-blue-600 w-20 -mt-14 left-16 absolute flex items-center justify-center">
                 1
@@ -60,7 +50,7 @@ export default function WhyChooseSection() {
           </section>
 
           {/* Item 2 */}
-          <section className="flex-1 max-w-[410px] relative mt-8">
+          <section className="flex-1 max-w-[410px] relative mt-8 mr-10">
             <div className="bg-orange-50 rounded-lg px-6 pt-7 pb-10 ml-6 mb-6">
               <div className="bg-white text-6xl font-bold text-orange-600 w-20 -mt-14 left-16 absolute flex items-center justify-center">
                 2
@@ -246,31 +236,7 @@ export default function WhyChooseSection() {
             </div>
           </section>
 
-          {/* Item 6 - LMS */}
-          <section className="lg:col-span-3 bg-gray-50 rounded-lg p-6">
-            <div className="flex items-center mb-6">
-              <span className="text-2xl font-bold text-gray-600 mr-4">6</span>
-              <h5 className="text-xl font-semibold">Online Learning Management System (LMS)</h5>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="grid grid-cols-2 gap-4">
-                {[1, 2, 3, 4].map((num) => (
-                  <Image
-                    key={num}
-                    alt={`System Screenshot`}
-                    src={'/assets/master-class/system--learning-${num}.png'}
-                    width={0}
-                    height={0}
-                    className="w-full h-auto rounded-lg shadow-md"
-                  />
-                ))}
-              </div>
-              <div>
-                <p className="text-gray-600 mb-4">We are excited to show you our very own online learning system, made by InterGreat. It&apos;s packed with the latest artificial intelligence (AI) technology and we put a ton of time, effort, and money into making it.</p>
-                <p className="text-gray-600">This LMS product stands as our strong commitment to providing a high-quality learning environment.</p>
-              </div>
-            </div>
-          </section>
+          
         </div>
       </div>
     </section>

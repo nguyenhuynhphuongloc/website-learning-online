@@ -15,7 +15,6 @@ export default function Homepage() {
 
     return (
         <div className="">
-            <HeaderHomePage />
             <Navbar />
             <CarouselDApiDemo />
             <LiveLessonsSection />

@@ -22,25 +22,13 @@ export default function MasterClass() {
   // ====== APP CHÍNH ======
   return (
     <div className="">
-      <HeaderHomePage />
       <Navbar />
       <div
         style={{ fontFamily: "Nunito, sans-serif" }}
-        className="min-h-screen flex flex-col text-black"
+        className="flex flex-col items-center justify-center text-black min-h-screen"
       >
         <HeroSection />
         <WhyStudyIELTS />
-        <IELTSStudyPlan />
-        <OverviewSection />
-        <MissionsSection />
-        <TeachersSection />
-        <StudentsTestimonials />
-        <OurHappyStudents />
-        <AboutInterGreat />
-        <AchievementsSection />
-        <ValuedPartners />
-        <PricingSection />
-        <StudyEverywhere />
       </div>
       <Footer />
     </div>

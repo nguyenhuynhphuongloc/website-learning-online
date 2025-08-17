@@ -33,7 +33,7 @@ export default function App() {
 
           <Route path="/pages/LibraryTestPage/Listening/ListeningTestDetail" element={< ListeningTestDetail />} />
 
-          <Route path="/pages/ResultPage" element={< ResultPage />} />
+          <Route path="/pages/LibraryTestPage/ResultPage" element={< ResultPage />} />
 
           <Route path="/pages/AdminPage" element={< AdminPage />} />
 
