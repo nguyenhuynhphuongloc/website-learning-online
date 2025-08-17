@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="522px" viewBox="0 0 1920 522" enable-background="new 0 0 1920 522" xml:space="preserve">
+<g id="_x31_200px-SOT-1.0">
+	<g id="_x31_.0.1---Home-page-_x2F_-Banner2" transform="translate(0.000000, -198.000000)">
+		<g id="椭圆形" transform="translate(0.000000, 198.000000)">
+			<g id="蒙版">
+				<rect id="path-1_1_" fill-rule="evenodd" clip-rule="evenodd" fill="#083050" width="1920" height="522"/>
+			</g>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="1353" y="-111" width="261" height="261">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="1353" y="-111" width="261" height="261" id="mask-2_1_">
+				<g filter="url(#Adobe_OpacityMaskFilter)">
+					<rect id="path-1_2_" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="1920" height="522"/>
+				</g>
+			</mask>
+			
+				<circle id="椭圆形备份-3" opacity="0.1479" mask="url(#mask-2_1_)" fill="none" stroke="#FAAA5A" stroke-width="50" enable-background="new    " cx="1483.5" cy="19.5" r="105.5"/>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="176" y="341" width="361" height="361">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="176" y="341" width="361" height="361" id="mask-2_2_">
+				<g filter="url(#Adobe_OpacityMaskFilter_1_)">
+					<rect id="path-1_3_" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="1920" height="522"/>
+				</g>
+			</mask>
+			
+				<circle id="椭圆形备份-5" opacity="0.1479" mask="url(#mask-2_2_)" fill="none" stroke="#C86478" stroke-width="54" enable-background="new    " cx="356.5" cy="521.5" r="153.5"/>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="1628" y="261" width="383" height="383">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="1628" y="261" width="383" height="383" id="mask-2_3_">
+				<g filter="url(#Adobe_OpacityMaskFilter_2_)">
+					<rect id="path-1_4_" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="1920" height="522"/>
+				</g>
+			</mask>
+			
+				<circle id="椭圆形备份-4" opacity="0.1238" mask="url(#mask-2_3_)" fill="none" stroke="#32B4C8" stroke-width="50" enable-background="new    " cx="1819.5" cy="452.5" r="166.5"/>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="-98" y="-111" width="316" height="316">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="-98" y="-111" width="316" height="316" id="mask-2_4_">
+				<g filter="url(#Adobe_OpacityMaskFilter_3_)">
+					<rect id="path-1_5_" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="1920" height="522"/>
+				</g>
+			</mask>
+			
+				<circle opacity="0.1514" mask="url(#mask-2_4_)" fill="none" stroke="#FFFFFF" stroke-width="54" enable-background="new    " cx="60" cy="47" r="131"/>
+		</g>
+	</g>
+</g>
+</svg>
