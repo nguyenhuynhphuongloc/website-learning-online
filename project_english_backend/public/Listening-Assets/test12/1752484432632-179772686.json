@@ -1,0 +1,328 @@
+{
+    "title": "IELTS Listening Test 12",
+    "audio": "",
+    "section": [
+        {
+            "content": "Part 1: Personal Details and Preferences",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "fill-in-the-blank",
+                    "question": "First name",
+                    "answer": "Yuki"
+                },
+                {
+                    "id": 2,
+                    "type": "fill-in-the-blank",
+                    "question": "Passport number",
+                    "answer": "AB1234567"
+                },
+                {
+                    "id": 3,
+                    "type": "fill-in-the-blank",
+                    "question": "Course enrolled",
+                    "answer": "English for Business"
+                },
+                {
+                    "id": 4,
+                    "type": "fill-in-the-blank",
+                    "question": "Length of the course",
+                    "answer": "12 weeks"
+                },
+                {
+                    "id": 5,
+                    "type": "fill-in-the-blank",
+                    "question": "Homestay time",
+                    "answer": "2 months"
+                },
+                {
+                    "id": 6,
+                    "type": "multiple-choice",
+                    "question": "Which kind of family does the girl prefer?",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "B C"
+                },
+                {
+                    "id": 7,
+                    "type": "fill-in-the-blank",
+                    "question": "Her favourite food is",
+                    "answer": "vegetable curry"
+                },
+                {
+                    "id": 8,
+                    "type": "fill-in-the-blank",
+                    "question": "Now she just plays ___ with her friends",
+                    "answer": "badminton"
+                },
+                {
+                    "id": 9,
+                    "type": "fill-in-the-blank",
+                    "question": "She would rather ___",
+                    "answer": "ride a bike"
+                },
+                {
+                    "id": 10,
+                    "type": "fill-in-the-blank",
+                    "question": "She can get the homestay information",
+                    "answer": "from the website"
+                }
+            ]
+        },
+        {
+            "content": "Part 2: Travel to Enzia",
+            "questions": [
+                {
+                    "id": 11,
+                    "type": "fill-in-the-blank",
+                    "question": "Normal visas last",
+                    "answer": "30 days"
+                },
+                {
+                    "id": 12,
+                    "type": "fill-in-the-blank",
+                    "question": "You need to pay",
+                    "answer": "$50"
+                },
+                {
+                    "id": 13,
+                    "type": "fill-in-the-blank",
+                    "question": "Require a letter to",
+                    "answer": "confirm your status"
+                },
+                {
+                    "id": 14,
+                    "type": "fill-in-the-blank",
+                    "question": "Embassy info is on",
+                    "answer": "page 11"
+                },
+                {
+                    "id": 15,
+                    "type": "fill-in-the-blank",
+                    "question": "You must complete a",
+                    "answer": "declaration form"
+                },
+                {
+                    "id": 16,
+                    "type": "fill-in-the-blank",
+                    "question": "Declare items on a",
+                    "answer": "customs form"
+                },
+                {
+                    "id": 17,
+                    "type": "fill-in-the-blank",
+                    "question": "Required health certificate",
+                    "answer": "yellow fever"
+                },
+                {
+                    "id": 18,
+                    "type": "fill-in-the-blank",
+                    "question": "To get youth fare, show",
+                    "answer": "student ID"
+                },
+                {
+                    "id": 19,
+                    "type": "fill-in-the-blank",
+                    "question": "Bring at least ___ photos",
+                    "answer": "6"
+                },
+                {
+                    "id": 20,
+                    "type": "fill-in-the-blank",
+                    "question": "Currency to bring",
+                    "answer": "euros"
+                }
+            ]
+        },
+        {
+            "content": "Part 3: Spending Habits",
+            "questions": [
+                {
+                    "id": 21,
+                    "type": "fill-in-the-blank",
+                    "question": "Her occupation is",
+                    "answer": "bank clerk"
+                },
+                {
+                    "id": 22,
+                    "type": "fill-in-the-blank",
+                    "question": "She spends about",
+                    "answer": "2 hours"
+                },
+                {
+                    "id": 23,
+                    "type": "fill-in-the-blank",
+                    "question": "She often goes to",
+                    "answer": "shopping malls"
+                },
+                {
+                    "id": 24,
+                    "type": "fill-in-the-blank",
+                    "question": "Most difficult to buy",
+                    "answer": "shoes"
+                },
+                {
+                    "id": 25,
+                    "type": "fill-in-the-blank",
+                    "question": "50% spend",
+                    "answer": "$100"
+                },
+                {
+                    "id": 26,
+                    "type": "fill-in-the-blank",
+                    "question": "15% spend",
+                    "answer": "$200"
+                },
+                {
+                    "id": 27,
+                    "type": "fill-in-the-blank",
+                    "question": "35% spend",
+                    "answer": "$300"
+                },
+                {
+                    "id": 28,
+                    "type": "multiple-choice",
+                    "question": "Most difficult items to buy?",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E",
+                        "F"
+                    ],
+                    "answer": "D E F"
+                }
+            ]
+        },
+        {
+            "content": "Part 4: Time Management Lecture",
+            "questions": [
+                {
+                    "id": 31,
+                    "type": "multiple-choice",
+                    "question": "Extra reading support",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "id": 32,
+                    "type": "multiple-choice",
+                    "question": "Past time management meant",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "B"
+                },
+                {
+                    "id": 33,
+                    "type": "multiple-choice",
+                    "question": "Today’s time management means",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "id": 34,
+                    "type": "multiple-choice",
+                    "question": "Students are assigned",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "id": 35,
+                    "type": "multiple-choice",
+                    "question": "Sign of pressure",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "id": 36,
+                    "type": "multiple-choice",
+                    "question": "Lecturer’s suggestion",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "C"
+                },
+                {
+                    "id": 37,
+                    "type": "multiple-choice",
+                    "question": "Three kinds of planners",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "id": 38,
+                    "type": "multiple-choice",
+                    "question": "Overview of time needs",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "D"
+                },
+                {
+                    "id": 39,
+                    "type": "multiple-choice",
+                    "question": "Daily planner is for",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "A"
+                },
+                {
+                    "id": 40,
+                    "type": "multiple-choice",
+                    "question": "Benefit of time management",
+                    "options": [
+                        "A",
+                        "B",
+                        "C",
+                        "D"
+                    ],
+                    "answer": "A"
+                }
+            ]
+        }
+    ]
+}

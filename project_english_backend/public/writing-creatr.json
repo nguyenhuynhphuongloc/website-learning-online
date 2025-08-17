@@ -1,0 +1,14 @@
+{
+    "title": "IELTS Writing Task Sample",
+    "sections": [
+        {
+            "title": "Task 1",
+            "content": "Describe the chart given using your own words.",
+            "imagePath": "assets/1628763283781-123456789.png"
+        },
+        {
+            "title": "Task 2",
+            "content": "Some people think schools should teach moral values. Do you agree or disagree?"
+        }
+    ]
+}
