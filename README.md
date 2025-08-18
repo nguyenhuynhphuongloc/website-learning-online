@@ -33,13 +33,13 @@ Build 1 function
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+![Dashboard](design\Screenshot 2025-08-17 210035.png)
 
-![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+![Dashboard](design\Screenshot 2025-08-17 210035.png)
 
-![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+![Dashboard](design\Screenshot 2025-08-17 210035.png)
 
-![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+![Dashboard](design\Screenshot 2025-08-17 210035.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
