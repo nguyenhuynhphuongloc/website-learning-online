@@ -1,4 +1,6 @@
 Learning Online Application
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Description:
 A modern web application that provides online programming and non-programming courses basing on IOT english web, allowing students to do english test in online.
@@ -23,11 +25,21 @@ Huynh Thanh Tuan
 + Build interfaces of web
 
 
-Huynh Thien Nhan
+
 
 Create BFD
 
 Build 1 function
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+
+![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+
+![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
+
+![Dashboard](C:\Users\ASUS\Documents\GitHub\website-learning-online\backend\design\Screenshot 2025-08-17 210035.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -64,15 +76,3 @@ Deployment Environment
 
 Docker
 
-
-
-
-
-
-
-
-
-
-Dashboard for teachers and students.
-
-Modern UI with Tailwind CSS and Shadcn/UI components.
