@@ -33,7 +33,27 @@ Build 1 function
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+![HomePage](./design/login.png)
+
+![HomePage](./design/ResultPage.png)
+
+![HomePage](./design/registPage.png)
+
+![HomePage](./design/Profile-Page.png)
+
+![HomePage](./design/Library-Test.png)
+
+![HomePage](./design/HomePage3.png)
+
+![HomePage](./design/HomePage2.png)
+
 ![HomePage](./design/HomePage1.png)
+
+![HomePage](./design/HomePage.png)
+
+![HomePage](./design/FooterPage.png)
+
+![HomePage](./design/Detail-Test.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
