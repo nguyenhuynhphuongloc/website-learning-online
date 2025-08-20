@@ -6,7 +6,7 @@ import Stripe from 'stripe';
     {
       provide: 'STRIPE_CLIENT',
       useFactory: () => {
-        return new Stripe('sk_test_51RhGJOPJgMEbAPth32y9jJ9HbHvaJKPc8m5eY6YnR7Ve7JQr3lpf4acHFwRDRMahxD3fpZhO3vHX4XtY6399rXGp00MVvPxfRB', {});
+        return new Stripe(process.env.sk_test, {});
       },
     },
   ],
