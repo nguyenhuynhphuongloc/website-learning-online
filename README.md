@@ -3,7 +3,10 @@ Learning Online Application
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Description:
-A modern web application that provides online programming and non-programming courses basing on IOT english web, allowing students to do english test in online.
+A modern web application that provides both programming and non-programming courses, inspired by the IoT English web platform.
+It allows students to register accounts, log in, take English tests online, view results, and manage profiles.
+
+The system is designed following RESTful API architecture, ensuring scalability, security, and separation of concerns between the frontend and backend.
 
 Author:
 
