@@ -7,7 +7,7 @@ import { AuthService } from 'src/auth/auth.service';
 export class LocalStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
     super({
-      usernameField: 'email', // 👈 truyền đúng kiểu cho Strategy (from 'passport-local')
+      usernameField: 'email',
     });
   }
 

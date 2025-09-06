@@ -19,7 +19,7 @@ export class AuthController {
 
 
   @Post('sign-up')
-  @Public() //Public() là một custom decorator để đánh dấu route không cần xác thực như đăng nhập
+  @Public()
   Register(@Body() registerDto: CreateAuthDto) {
     return this.authService.Register(registerDto)
   }
@@ -37,7 +37,7 @@ export class AuthController {
   @UseGuards(RefreshTokenGuard)
   @Post('refreshToken')
   async RefreshToken(@Request() req) {
-    return await this.authService.refreshToken(req.id, req.username,req.role);
+    return await this.authService.refreshToken(req.id, req.username, req.role);
   }
 
   @Post('forgot-password')
@@ -50,30 +50,25 @@ export class AuthController {
   @UseGuards(AuthGuard)
   async changePassword(@Body() changePasswordDto: ChangePasswordDto, @Request() req) {
 
-    console.log(req.user); // Kiểm tra user có tồn tại không
+    console.log(req.user);
     const userId = req.user.sub
 
     return await this.authService.changePassword(
-      userId, // Đảm bảo token có user.id
+      userId,
       changePasswordDto.oldPassword,
       changePasswordDto.newPassword,
     );
   }
-
-
-
-
-
 
   @Get('mail')
   @Public()
   async testMail() {
     try {
       await this.Mailservice.sendMail({
-        to: 'nguyenhuynhphuongloc@gmail.com', // list of receivers
-        subject: 'Testing Nest MailerModule ✔', // Subject line
-        text: 'Welcome', // plaintext body
-        html: '<b>Hello World</b>', // HTML body content
+        to: 'nguyenhuynhphuongloc@gmail.com',
+        subject: 'Testing Nest MailerModule ✔',
+        text: 'Welcome',
+        html: '<b>Hello World</b>',
       });
       console.log('Email sent successfully!');
     } catch (error) {
@@ -106,9 +101,9 @@ export class AuthController {
   @Get('google/callback')
   async googleCallback(@Req() req, @Res() res: Response) {
 
-    const user = req.user; // req.user được lấy từ validate của GoogleStrategy
+    const user = req.user;
 
-    const  accessToken  = await this.authService.generateAccesstoken(user.id)
+    const accessToken = await this.authService.generateAccesstoken(user.id)
 
 
     const redirectUrl = new URL(process.env.FRONTEND_GOOGLE_CALLBACK_URL);

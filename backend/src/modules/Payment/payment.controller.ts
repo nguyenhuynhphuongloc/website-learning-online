@@ -13,13 +13,6 @@ export class PaymentController {
 
   ) { }
 
-  @Post('create-momo')
-  async create(@Body() amounts: CreatePaymentDto) {
-
-    return await this.paymentService.createMomo(amounts);
-
-  }
-
   @Post('handler-payment')
   async handleMomoCallback(@Body() body: any) {
     const extraData = JSON.parse(Buffer.from(body.extraData, 'base64').toString());
@@ -33,9 +26,9 @@ export class PaymentController {
   @Get('payments')
   async createProduct() {
     const product = await this.stripe.products.create({
-      name: 'Gold Plan',                 // Tên gói
-      description: 'Access to premium content and features', // Mô tả sản phẩm
-      active: true,                      // Sản phẩm có đang hoạt động không
+      name: 'Gold Plan',                
+      description: 'Access to premium content and features', 
+      active: true,                      
       metadata: {
         internalId: '12345',
         category: 'subscription',
@@ -45,9 +38,9 @@ export class PaymentController {
       ],
       default_price_data: {
         currency: 'usd',
-        unit_amount: 9900, // Giá 99.00 USD (tính bằng cent)
+        unit_amount: 9900, 
         recurring: {
-          interval: 'month', // Hoặc: day | week | month | year
+          interval: 'month',
         },
       },
     });
@@ -72,10 +65,10 @@ export class PaymentController {
         transfers: { requested: true },
         card_payments: { requested: true },
       },
-      business_type: 'individual', // hoặc 'company'
+      business_type: 'individual', 
     });
 
-    return account; // account.id sẽ dùng để liên kết seller
+    return account; 
   }
 
   @Post('create-payment-link')
@@ -105,7 +98,7 @@ export class PaymentController {
     const paymentLink = await this.stripe.paymentLinks.create({
       line_items: lineItems,
       metadata: {
-        order_id: body.orderId, // ✅ Gắn mã đơn hàng tại đây
+        order_id: body.orderId,
       },
     });
 

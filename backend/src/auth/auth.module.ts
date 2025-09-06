@@ -35,13 +35,12 @@ import { JwtStrategy } from 'src/auth/stragegies/jwt.strategy';
       { name: ResetToken.name, schema: ResetTokenSchema },
       { name: Blacklist.name, schema: BlacklistSchemal },
     ]),
-
-    // Cấu hình Google OAuth, JWT, Refresh JWT
+    
     ConfigModule.forFeature(googleOuth),
     ConfigModule.forFeature(jwtConfig),
     ConfigModule.forFeature(refreshJwtConfig),
 
-    // ✅ Cấu hình JWT duy nhất (dùng async để lấy từ config service)
+
     JwtModule.registerAsync(jwtConfig.asProvider()),
   ],
 
@@ -65,4 +64,4 @@ import { JwtStrategy } from 'src/auth/stragegies/jwt.strategy';
     MongooseModule,
   ],
 })
-export class AuthModule {}
+export class AuthModule { }

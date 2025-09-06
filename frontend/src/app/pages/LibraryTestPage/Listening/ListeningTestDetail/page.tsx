@@ -45,12 +45,7 @@ export default function ListeningTestDetail() {
         }));
     };
 
-
-
-    // Tính phần trăm tiến trình phát của audio
     const progressPercentage = (currentTime / duration) * 100 || 0;
-
-    // Cập nhật chiều rộng của slider với duration của audio
 
 
     useEffect(() => {
@@ -183,7 +178,7 @@ export default function ListeningTestDetail() {
                 isPlaying={isPlaying}
             />
 
-            {/* Nội dung phần câu hỏi */}
+      
             <div className="flex-1 overflow-y-auto px-4 py-2">
                 {testData && testData.section[activeSectionIndex] && (
                     <ExportQuestionTypes
@@ -194,7 +189,7 @@ export default function ListeningTestDetail() {
                 )}
             </div>
 
-            {/* Footer luôn ở dưới */}
+     
             {testData && (
                 <FooterTest
                     setActiveSectionIndex={setActiveSectionIndex}

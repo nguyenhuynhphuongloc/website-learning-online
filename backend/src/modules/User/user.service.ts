@@ -34,7 +34,7 @@ export class UserService {
     }
 
     async createUser(createUserDto: CreateUserDto) {
-        // Kiểm tra nếu email đã tồn tại
+
         if (await this.CheckEmailExist(createUserDto.email)) {
             throw new BadRequestException(`Email already exists: ${createUserDto.email}`);
         }
@@ -44,8 +44,8 @@ export class UserService {
 
         createdUser.password = await hassPassword(createUserDto.passWord);
 
-        // Lưu người dùng vào cơ sở dữ liệu và chờ kết quả
-        const savedUser = await createdUser.save();  // Đợi save xong và trả về giá trị
+
+        const savedUser = await createdUser.save();
 
         await this.walletService.create({
 
@@ -61,7 +61,7 @@ export class UserService {
 
     }
 
-    @UseInterceptors(CacheInterceptor) // tự động cache
+    @UseInterceptors(CacheInterceptor)
     async getUsers(): Promise<User[]> {
 
         console.log("successful");
@@ -79,11 +79,11 @@ export class UserService {
     }
 
     async getProfile(userId: string) {
-        // Kiểm tra xem userId có phải là ObjectId hợp lệ không
+
         const isValid = Types.ObjectId.isValid(userId);
         if (!isValid) throw new NotFoundException('User not found');
 
-        // Tìm kiếm người dùng theo userId
+
         const user = await this.userModel.findById(userId).select(
             'gender firstName lastName dob email phoneNumber'
         );
@@ -95,8 +95,8 @@ export class UserService {
     }
 
     async findAll(query: any) {
-        const { filter, sort } = aqp(query); // Parse lọc và sắp xếp từ query string
-        let { current, pageSize } = query; // Lấy current page và page size từ query string
+        const { filter, sort } = aqp(query);
+        let { current, pageSize } = query;
 
 
         current = parseInt(current) || 1;
@@ -105,29 +105,29 @@ export class UserService {
         console.log('Filter:', filter);
         console.log('Sort:', sort);
 
-        // Tổng số items phù hợp với điều kiện lọc
+
         const totalItems = await this.userModel.countDocuments(filter);
 
-        // Tính tổng số trang
+
         const totalPages = Math.ceil(totalItems / pageSize);
 
-        // Bỏ qua (skip) số lượng items dựa trên trang hiện tại
+
         const skip = (current - 1) * pageSize;
 
-        // Lấy danh sách kết quả từ MongoDB
+
         const results = await this.userModel
-            .find(filter) // Áp dụng điều kiện lọc
-            .limit(pageSize) // Giới hạn số lượng kết quả
-            .skip(skip) // Bỏ qua số lượng kết quả đầu
-            .sort(sort as any); // Áp dụng sắp xếp
+            .find(filter)
+            .limit(pageSize)
+            .skip(skip)
+            .sort(sort as any);
 
         return {
-            results, // Kết quả trả về
+            results,
             pagination: {
-                current, // Trang hiện tại
-                pageSize, // Kích thước trang
-                totalItems, // Tổng số mục
-                totalPages, // Tổng số trang
+                current,
+                pageSize,
+                totalItems,
+                totalPages,
             },
         };
     }
@@ -169,30 +169,30 @@ export class UserService {
     }
 
     async Register(registerDto: CreateAuthDto) {
-        // Kiểm tra email đã tồn tại
+
         if (await this.CheckEmailExist(registerDto.email)) {
             throw new BadRequestException(`Email already exists: ${registerDto.email}`);
         }
 
-        // Hash password
+
         const hashedPassword = await hassPassword(registerDto.password);
 
-        // Tạo user mới với thuộc tính mặc định
+
         const createdUser = await this.userModel.create({
             ...registerDto,
-            password: hashedPassword, // Cập nhật mật khẩu đã hash
-            active: true, // Gán giá trị mặc định cho active
+            password: hashedPassword,
+            active: true,
             codeId: uuidv4()
         });
 
 
         await this.walletService.create({
-            amount: '0', // hoặc 0 nếu bạn xử lý ép kiểu trong DTO
+            amount: '0',
             userId: createdUser._id.toString()
         });
 
 
-        // Gửi email (nếu cần)
+
         console.log(`Welcome email sent to: ${createdUser.email}`);
 
         await this.maileService.sendUserConfirmation(createdUser)
@@ -201,7 +201,7 @@ export class UserService {
     }
 
     async updateProfile(userId: string, updateUser: UpdateUserDto) {
-        // Kiểm tra xem userId có phải là ObjectId hợp lệ không
+
         const user = await this.userModel.findByIdAndUpdate(
             userId,
             updateUser,

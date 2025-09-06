@@ -23,7 +23,7 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   }
 
   async validate(
-    req: Request, // ✅ bắt buộc khi dùng passReqToCallback
+    req: Request, 
     accessToken: string,
     refreshToken: string,
     profile: any,
@@ -39,7 +39,7 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
       return done(new Error("User not found"), false);
     }
 
-    done(null, user); // ✅ phải gọi done()
+    done(null, user);
   }
 
 

@@ -10,7 +10,7 @@ export class OrderDto {
 
   @IsDateString()
   @IsNotEmpty()
-  orderDate: Date; // ISO format date (e.g., "2025-04-07T13:00:00Z")
+  orderDate: Date;
 
   @IsArray()
   @ValidateNested({ each: true })

@@ -168,10 +168,6 @@ export class AuthService {
     return await this.userService.updateHashedRefeshToken(userId, null)
   }
 
-  async TakeExam(user: User) {
-
-  }
-
   async resetPassword(newPassword: string, resetToken: string) {
 
     const token = await this.resetTokenModel.findOne({
@@ -208,9 +204,9 @@ export class AuthService {
 
     user.password = newHashPassword
 
-    await user.save(); // ✅ Dùng `save()` thay vì `bulkSave()`
+    await user.save();
 
-    return { message: "Password updated successfully" }; // ✅ Trả về kết quả
+    return { message: "Password updated successfully" };
 
   }
 
@@ -223,7 +219,7 @@ export class AuthService {
 
     let newProduct;
 
-    const subFolderDir = `products/${newProduct.id.toString()}`; // Đảm bảo newProduct.id tồn tại
+    const subFolderDir = `products/${newProduct.id.toString()}`;
 
     console.log(subFolderDir)
 
@@ -259,7 +255,7 @@ export class AuthService {
 
 
   async validateJwtUser(userId: string) {
-    return this.userModel.findById(userId); // return user
+    return this.userModel.findById(userId);
   }
 
   async generateToken(userId: string) {
@@ -292,7 +288,6 @@ export class AuthService {
       throw new Error('Email not found in Google profile');
     }
 
-    // Kiểm tra user đã tồn tại
     let user = await this.userModel.findOne({ email });
 
     const customId = new mongoose.Types.ObjectId();
@@ -303,16 +298,16 @@ export class AuthService {
       return user;
     }
 
-    // Nếu chưa có, tạo user mới từ Google
+
     user = new this.userModel({
       email,
       firstName: profile.name?.givenName || '',
-      hashedRefreshToken:refreshToken,
+      hashedRefreshToken: refreshToken,
       lastName: profile.name?.familyName || '',
       avatarUrl: profile.photos?.[0]?.value || '',
       provider: 'google',
-      username: profile.id, // Có thể dùng email thay thế nếu muốn
-      password: "321321",        // Không cần mật khẩu với Google login
+      username: profile.id,
+      password: "321321",
       active: true,
     });
 
@@ -340,7 +335,7 @@ export class AuthService {
     return currentuser;
   }
 
-  async refreshToken(userId: string, username: string,role:string) {
+  async refreshToken(userId: string, username: string, role: string) {
 
     const { accessToken, refreshToken } = await this.generateToken(userId);
 
@@ -348,7 +343,7 @@ export class AuthService {
       id: userId,
       username,
       role:
-      accessToken,
+        accessToken,
       refreshToken,
     }
 

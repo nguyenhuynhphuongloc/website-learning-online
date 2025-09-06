@@ -11,12 +11,12 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(
     @Inject(jwtConfig.KEY)
     private readonly jwtConf: ConfigType<typeof jwtConfig>,
-    private readonly authService: AuthService, // nếu bạn cần validate user
+    private readonly authService: AuthService, 
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       secretOrKey: jwtConf.secret,
-      ignoreExpiration: false, // nếu bạn muốn kiểm tra thời gian hết hạn của token
+      ignoreExpiration: false, 
     });
   }
 
@@ -25,7 +25,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     
     if (!user) throw new UnauthorizedException();
   
-    return { userId: user._id.toString() }; // trả về object với key userId
+    return { userId: user._id.toString() }; 
   }
 
 }

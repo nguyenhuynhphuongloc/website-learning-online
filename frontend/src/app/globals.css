@@ -1,4 +1,4 @@
-/* src/styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,18 +29,17 @@ body {
   animation: slideDown 0.5s ease-out forwards;
 }
 
-/* Thanh cuộn nhỏ gọn */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #e6fffa; /* Màu nền của track */
+  background: #e6fffa;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #87CEEB; /* Màu của thanh kéo */
+  background: #87CEEB; 
   border-radius: 10px;
 }
 

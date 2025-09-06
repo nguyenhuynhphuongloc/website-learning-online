@@ -12,6 +12,8 @@ import { Model } from 'mongoose';
 import { BlacklistService } from '../../modules/Blacklist/blacklist.service';
 import { RefreshToken } from 'src/schemas/RefreshToken.schemas';
 
+
+
 @Injectable()
 export class AuthGuard implements CanActivate {
   constructor(
@@ -30,7 +32,7 @@ export class AuthGuard implements CanActivate {
 
     if (!token) throw new UnauthorizedException('Missing or invalid token');
 
-    // Kiểm tra token có nằm trong blacklist không (nếu là async thì cần await)
+
     const isBlacklisted = await this.blacklistService.FindAccesstoken(token);
 
     if (isBlacklisted) throw new UnauthorizedException('Token is in blacklist');
@@ -42,9 +44,6 @@ export class AuthGuard implements CanActivate {
       });
 
       request.user = { userId: decoded.sub._id };
-
-      console.log(request.user)
-
 
       return true;
 
@@ -77,17 +76,17 @@ export class AuthGuard implements CanActivate {
         secret: process.env.JWT_SECRET,
       });
 
-      // Giả sử bạn lưu userId và token trong refreshToken collection
+  
       const tokenDoc = await this.refreshTokenModel.findOne({
         token: refreshToken,
-        userId: decodedRefreshToken.userId, // tuỳ schema
+        userId: decodedRefreshToken.userId, 
       });
 
       if (!tokenDoc) {
         throw new UnauthorizedException('Invalid refresh token');
       }
 
-      // Tạo lại access token
+
       const newAccessToken = this.jwtService.sign(
         { userId: decodedRefreshToken.userId },
         { secret: process.env.JWT_SECRET, expiresIn: '1h' },
