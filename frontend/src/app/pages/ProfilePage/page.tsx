@@ -18,7 +18,7 @@ import Navbar from "@/app/pages/HomePage/components/NavBar/page";
 import Link from "next/link";
 import ModalSaveProfile from "@/app/Shared/Modal/mobal_update";
 
-// Define ProfileSchema with fixed validation for lastname
+
 const ProfileSchema = z.object({
     firstName: z.string().min(2, { message: "Tên đăng nhập phải có ít nhất 2 kí tự" }),
     lastName: z.string().min(2, { message: "Họ tên phải có ít nhất 2 kí tự" }),
@@ -31,13 +31,16 @@ const ProfileSchema = z.object({
 });
 
 export default function ProfilePage() {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const [isClient, setIsClient] = useState(false);
+
     const [profileData, setProfileData] = useState<z.infer<typeof ProfileSchema> | null>(null);
 
     useEffect(() => {
         setIsClient(true);
-        // Gọi API để lấy thông tin profile khi component mount
+
         const fetchProfile = async () => {
             try {
                 const accessToken = localStorage.getItem("accessToken");
@@ -61,7 +64,7 @@ export default function ProfilePage() {
                     ...data,
                     DateofBirth: data.DateofBirth && !isNaN(new Date(data.DateofBirth).getTime())
                         ? new Date(data.DateofBirth)
-                        : new Date(), // Fallback nếu không hợp lệ
+                        : new Date(),
                 };
                 setProfileData(formattedData);
 
@@ -72,6 +75,7 @@ export default function ProfilePage() {
         };
 
         fetchProfile();
+
     }, []);
 
     const minDate = useMemo(() => new Date("1900-01-01"), []);
@@ -86,11 +90,11 @@ export default function ProfilePage() {
             DateofBirth: new Date(),
             email: "",
             phoneNumber: "",
-            ... (profileData || {}), 
+            ... (profileData || {}),
         },
     });
 
-  
+
     useEffect(() => {
         if (profileData) {
             form.reset(profileData);
@@ -122,10 +126,10 @@ export default function ProfilePage() {
 
             const result = await response.json();
             console.log("Profile updated successfully:", result);
-            // setIsSuccess(true) sẽ được xử lý trong modal
+
         } catch (error) {
             console.error("Error updating profile:", error);
-            // Lỗi sẽ được xử lý trong modal (setIsSuccess không thay đổi)
+
         }
     };
 
@@ -189,7 +193,7 @@ export default function ProfilePage() {
                 </div>
 
                 <div className="w-3/4 bg-white shadow-md rounded-lg p-6 ml-6 border-2">
-                    {/* Profile Form */}
+
                     <Avatar className="mx-auto">
                         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" className="h-25 w-25" />
                     </Avatar>
@@ -202,7 +206,7 @@ export default function ProfilePage() {
                     <Form {...form}>
                         <form onSubmit={(e) => { e.preventDefault(); openModal(); }}>
                             <div className="flex flex-col gap-12">
-                                {/* First Name and Last Name */}
+
                                 <div className="flex gap-[24px]">
                                     <FormField
                                         control={form.control}
@@ -239,7 +243,7 @@ export default function ProfilePage() {
                                         )}
                                     />
                                 </div>
-                                {/* Date of Birth and Gender */}
+
                                 <div className="flex gap-4">
                                     <FormField
                                         control={form.control}
@@ -308,7 +312,7 @@ export default function ProfilePage() {
                                         )}
                                     />
                                 </div>
-                                {/* Email and Phone */}
+
                                 <div className="flex gap-4">
                                     <FormField
                                         control={form.control}
@@ -345,7 +349,7 @@ export default function ProfilePage() {
                                         )}
                                     />
                                 </div>
-                                {/* Submit Button */}
+
                                 <div className="mt-6 flex justify-end">
                                     <Button
                                         type="submit"
@@ -358,7 +362,7 @@ export default function ProfilePage() {
                         </form>
                     </Form>
 
-                    {/* Modal for success message */}
+
                     <ModalSaveProfile
                         visible={isModalOpen}
                         closeModal={closeModal}

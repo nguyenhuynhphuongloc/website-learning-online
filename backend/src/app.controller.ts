@@ -13,9 +13,8 @@ export class AppController {
   }
   constructor(private authService: AuthService) { }
 
-
   @Get('profile')
   someProtectRoute(@Req() req) {
-    return {message:'Access Resource', userId: req.user._id}
+    return { message: 'Access Resource', userId: req.user._id }
   }
 }

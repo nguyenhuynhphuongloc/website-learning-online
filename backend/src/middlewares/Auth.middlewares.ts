@@ -1,4 +1,4 @@
-// src/middlewares/auth.middleware.ts
+
 import { Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
 import { JwtService } from '@nestjs/jwt';
@@ -21,7 +21,7 @@ export class AuthMiddleware implements NestMiddleware {
 
       const decoded = this.jwtService.verify(token, { secret: process.env.JWT_SECRET });
 
-      req.user = decoded; // Gán user vào request
+      req.user = decoded; 
 
       next();
 

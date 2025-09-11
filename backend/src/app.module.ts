@@ -44,7 +44,7 @@ import { WritingResultModule } from 'src/modules/Results/WritingResult/writing-r
     CommentModule,
     ListeningTestModule,
     AuthModule,
-    ConfigModule.forRoot({ isGlobal: true }), // Load file .env toàn cục
+    ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRootAsync({
       useFactory: async (configService: ConfigService) => {
 
@@ -58,7 +58,7 @@ import { WritingResultModule } from 'src/modules/Results/WritingResult/writing-r
 
         return {
           uri,
-          authSource: 'admin', // Ensure MongoDB authenticates correctly
+          authSource: 'admin',
         };
       },
       inject: [ConfigService],
@@ -67,9 +67,8 @@ import { WritingResultModule } from 'src/modules/Results/WritingResult/writing-r
 
     MailerModule.forRootAsync({
 
-      // imports: [ConfigModule], // import module if not enabled globally
       useFactory: async (config: ConfigService) => ({
-        // transport: config.get("MAIL_TRANSPORT"),
+
 
         transport: {
           host: config.get<string>('MAIL_HOST'),
@@ -78,7 +77,7 @@ import { WritingResultModule } from 'src/modules/Results/WritingResult/writing-r
             user: config.get<string>('Mail_User'),
             pass: config.get<string>('Mail_password'),
           },
-          connectionTimeout: 10000,  // Increase timeout (20 seconds)
+          connectionTimeout: 10000,
         },
         defaults: {
           from: `"No Reply" <${config.get<string>('dsa')}>`,
@@ -95,15 +94,15 @@ import { WritingResultModule } from 'src/modules/Results/WritingResult/writing-r
     }),
 
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'), // thư mục chứa public assets
-      serveRoot: '/assets', // URL prefix
+      rootPath: join(__dirname, '..', 'public'),
+      serveRoot: '/assets',
     }),
 
     JwtModule.registerAsync({
       useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET'),  // Sử dụng get để lấy SECRET_KEY từ .env
+        secret: configService.get<string>('JWT_SECRET'),
         signOptions: {
-          expiresIn: 3600,  // Token sẽ hết hạn trong 1 giờ
+          expiresIn: 3600,
         },
       }),
       inject: [ConfigService],

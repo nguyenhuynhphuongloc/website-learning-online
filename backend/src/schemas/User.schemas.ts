@@ -45,13 +45,13 @@ export class User {
   @Prop({ default: false })
   active: boolean;
 
-  @Prop({ default: false }) // Trạng thái VIP mặc định là false
+  @Prop({ default: false }) 
   isVip?: boolean;
 
-  @Prop({ type: Number, default: 0 }) // Số điểm người dùng
+  @Prop({ type: Number, default: 0 }) 
   roleId?: number;
 
-  @Prop({ required: false }) // Ngày hết hạn VIP
+  @Prop({ required: false }) 
   vipExpirationDate?: Date;
 
   @Prop([{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }])

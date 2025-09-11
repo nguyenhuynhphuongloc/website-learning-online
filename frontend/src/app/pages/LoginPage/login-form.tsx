@@ -17,7 +17,6 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import axiosInstance from "@/app/utils/RefeshTokenHandler"
-import { AccessStored } from "@/app/utils/TokenStore"
 import { signInSchema } from "@/lib/type"
 import { createSession } from "@/lib/session"
 
@@ -42,9 +41,9 @@ export function LoginForm() {
         delayError: 0, // Trì hoãn 500ms trước khi hiển thị lỗi validation
     })
 
-    // Xử lý đăng nhập
+   
     async function onSubmit(values: z.infer<typeof signInSchema>) {
-            // Gọi API đăng nhập bằng axiosInstance
+           
              const response = await axiosInstance.post('http://localhost:8080/auth/login', values);
 
              const Session = {

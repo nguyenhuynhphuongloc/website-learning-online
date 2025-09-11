@@ -48,10 +48,10 @@ export default function PaymentPage() {
     };
 
     function convertUSDToVND(usd: number): string {
-        const exchangeRate = 23500; // Tỷ giá hối đoái hiện tại
+        const exchangeRate = 23500;
         const vnd = usd * exchangeRate;
 
-        // Format số theo chuẩn tiền tệ Việt Nam
+
         return vnd.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
     }
 
